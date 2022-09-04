@@ -3,9 +3,13 @@
   margin: 0;
 }
 
+body {
+  background-color: #000;
+}
+
 .main-nav {
-  display: flex;
   padding: 20px 0;
+  width: 100%;
 }
 
 .main-nav ul {
@@ -17,10 +21,10 @@
 
 .main-nav ul a {
   padding: 20px;
-  color: #000;
   font-weight: bold;
   font-size: 30px;
   text-decoration: none;
+  color:rgb(165, 14, 14);
 }
 
 .main-nav ul a.selected {
@@ -61,18 +65,63 @@
   border-radius: 5%;
   border-style: solid;
   border-color: #000;
+  background-color: #fff;
+  box-shadow: 5px 10px #1e31c4;
+}
+
+.show-card > p {
+  padding-bottom: 10px;
+}
+
+.name-year {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.likeButton,
+.commentsButton {
+  display: inline-block;
+  background-color: lightblue;
+  border-radius: 10px;
+  border: 1px solid #0000ff;
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px 20px;
+  width: 8rem;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0.5rem;
+  font-style: bold;
+  text-decoration: none;      
+  text-transform: uppercase;
+}
+
+.likesLine {
+  margin-top: 20px;
+  margin-left: 45px;
+  display: flex;
+}
+
+.likeButton:hover,
+.commentsButton:hover {
+  background-color: rgb(231, 157, 20);
+  transform: rotate(2deg);
 }
 
 .popup-container {
-  background-color: rgba(36, 49, 36, 1);
+  background-color: rgb(1, 9, 41);
   z-index: 9999;
   position: fixed;
   top: 0;
   left: 0;
-  width: 50vw;
+  width: 90vw;
   height: 90vh;
   margin: 10px auto;
-  overflow-y: scroll;
+  overflow-y: auto;
   right: 0;
   bottom: 0;
   padding: 24px;
@@ -177,19 +226,20 @@
 .comments-container > div {
   color: #456789;
   font-size: 20px;
-  text-align: left;
-  margin-left: 350px;
+  text-align: center;
 }
 
 .footer-border {
-  padding-left: 50px;
-  border: 2px solid #000;
-  color: #000;
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.showsLine {
-  display: inline-flex;
+  height: 4vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(6, 37, 46);
+  color: rgb(14, 29, 233);
+  font-style: italic;
+  font-size: 24px;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }

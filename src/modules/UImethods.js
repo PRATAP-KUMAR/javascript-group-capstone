@@ -6,19 +6,21 @@ export const renderShows = (showsData) => {
   showsData.forEach((show) => {
     document.querySelector('.showsContainer').innerHTML += `
     <div class="show-card">
-    <h3>${show.name}</h3>
-    <h4>${show.premiered.substring(0, 4)}</h4>
+      <div class="name-year">
+        <h3>${show.name}</h3>
+        <h3>${show.premiered.substring(0, 4)}</h3>
+      </div>
     <img src=${show.image.medium}  width="290" height="290"/>
     <p>${show.summary.substring(0, 300)}</p>
     <div class="likesLine">
-      <h4>Likes: </h4>
+      <h4>Likes:&nbsp;</h4>
       <h4 class="likesCount" id=${show.externals.imdb}></h4>
     </div>
-    <button clicked="false" class="button likeButton" type="button" id=${show.externals.imdb}>Like!</button>
+    <button clicked="false" class="button likeButton" type="button" id=${show.externals.imdb}>Like! &hearts;</button>
     <button class="button commentsButton" type="button" id=${show.externals.imdb}>Comments</button>
     </div>`;
   });
-  document.querySelector('.showsLink').innerHTML = `shows (${itemsCount(showsData)})`;
+  document.querySelector('.showsLink').innerHTML = `Shows (${itemsCount(showsData)})`;
 };
 
 export const getButtonsList = () => document.querySelectorAll('.button');

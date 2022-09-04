@@ -13,6 +13,9 @@ This is a web application based on an external API. The external API provides da
 - JavaScript
 - html & css
 
+## Live Demo
+
+![JUAN-PRATAP](https://user-images.githubusercontent.com/40719899/188249616-2a32b503-eabf-46c9-bcd6-a2ef11da6407.gif)
 
 ## Presentation Video
 
